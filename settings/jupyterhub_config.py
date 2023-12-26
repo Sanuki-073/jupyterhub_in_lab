@@ -300,7 +300,7 @@ class MyDockerSpawner(DockerSpawner):
 c.JupyterHub.log_level=logging.DEBUG
 c.JupyterHub.spawner_class = MyDockerSpawner
 c.MyDockerSpawner.read_only_volumes = {"/var/run/docker.sock": "/var/run/docker.sock"}
-#c.MyDockerSpawner.remove = True
+
 
 
 c.MyDockerSpawner.use_internal_ip = True
@@ -308,16 +308,12 @@ c.DockerSpawner.debug = True
 c.MyDockerSpawner.network_name = "bridge"
 
 
-#c.Spawner.default_url = "/lab"
 c.MyDockerSpawner.start_timeout =120
-# jupyterのhubへのルート
+
 c.JupyterHub.hub_ip = get_jupyterhub_ip(JUPYTER_HUB_CONTAINER_NAME)
 c.JupyterHub.hub_port = 8080 #好きなポート
 
 
-# JupyterhubにアクセスするためのIP
-#c.JupyterHub.ip=get_jupyterhub_ip(JUPYTER_HUB_CONTAINER_NAME)
-#c.JupyterHub.port = 8081
 
 
 
