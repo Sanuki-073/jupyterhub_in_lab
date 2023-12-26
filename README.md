@@ -2,9 +2,11 @@
 研究室など特定のファイアウォール内で利用する前提のDocker+JupyterHub環境の設定
 
 # 構成
-Docker内で、DockerSpawnerでJupyterを起動するJupyterHubを起動。\\
+Docker内で、DockerSpawnerでJupyterを起動するJupyterHubを起動。
+
 Authはjupyterhub-firstuseauthenticatorを採用しており、ユーザー作成後に最初にログインするパスワードを利用するため、外部公開するような場合には適していない。
 (そもそもJupyterhub自体外部公開は適していない)
+
 外部(ホスト)のDocker権限をDocker内のDokcerSpawnnerに与えることで、ユーザーごとのDocker環境を構築可能
 
 起動するイメージの変更やGPUを使うかなど設定をできるようにしている。
