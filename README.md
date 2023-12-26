@@ -18,9 +18,13 @@ Authはjupyterhub-firstuseauthenticatorを採用しており、ユーザー作�
 外部(ホスト)のDocker権限をDocker内のDokcerSpawnnerに与えることで、ユーザーごとのDocker環境を構築可能
 
 起動するイメージの変更やGPUを使うかなど設定をできるようにしている。
+
 <img width="799" alt="image" src="https://github.com/Sanuki-073/jupyterhub_in_lab/assets/43844864/6af76d1c-a05d-40fb-a510-973e76d39638">
+
 なおJupyterhubで起動できるイメージを事前にインストールしておく必要があり、
+
 https://hub.docker.com/r/jupyter/base-notebook/tags
+
 などで見つけられる。
 
 GPU対応のコンテナの作り方はWebにあるのでその通りに作ればいける。
