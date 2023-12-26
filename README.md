@@ -1,0 +1,2 @@
+# jupyterhub_in_lab
+研究室など特定のファイアウォール内で利用する前提のDocker+JupyterHub環境の設定
