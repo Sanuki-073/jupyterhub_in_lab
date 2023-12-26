@@ -25,6 +25,8 @@ https://hub.docker.com/r/jupyter/base-notebook/tags
 
 GPU対応のコンテナの作り方はWebにあるのでその通りに作ればいける。
 
+デフォルトでリポジトリ内のworkspace内にそれぞれのユーザーのフォルダを作成し、mnt_workspaceという名前でそれぞれの環境でマウントしている(はず)
+
 
 
 また、起動後のHub Control Pannelでコンテナのコミットなどをできるようにしている。
