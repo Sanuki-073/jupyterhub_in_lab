@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  jupyterhub-in-lab:
+    container_name: jupyterhub
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./workspace:/share/workspace"
+      - "./settings/home.html:/usr/local/share/jupyterhub/templates/home.html"
+      - "./settings/home.js:/usr/local/share/jupyterhub/static/js/home.js"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./settings/jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py"
+      - "users:/srv/jupyterhub"
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+    network_mode: bridge
+    restart: always
+
+volumes:
+  users:
