@@ -1,12 +1,12 @@
 # jupyterhub_in_lab
 研究室など特定のファイアウォール内で利用する前提のDocker+JupyterHub環境の設定
 
-#起動
+# 起動
 リポジトリクローン後に、リポジトリ内で
 ```shell
 docker-compose up
 ```
-
+でJupyterhub用のコンテナが起動し、localhost:8000でアクセスできる。
 # 構成
 Docker内で、DockerSpawnerでJupyterを起動するJupyterHubを起動。
 
