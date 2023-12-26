@@ -4,6 +4,8 @@
 # 構成
 Docker内で、DockerSpawnerでJupyterを起動するJupyterHubを起動。
 
+アドミンアカウントはserveradmin(passは最初にログインしたときに決定)
+
 Authはjupyterhub-firstuseauthenticatorを採用しており、ユーザー作成後に最初にログインするパスワードを利用するため、外部公開するような場合には適していない。
 (そもそもJupyterhub自体外部公開は適していない)
 
