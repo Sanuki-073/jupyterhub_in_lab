@@ -27,7 +27,9 @@ https://hub.docker.com/r/jupyter/base-notebook/tags
 
 などで見つけられる。
 
-GPU対応のコンテナの作り方はWebにあるのでその通りに作ればいける。
+GPU対応のコンテナの作り方はいろいろあるのでその通りに作ればいける。
+
+https://qiita.com/taiyodayo/items/76f702b5facb9beca5e5
 
 デフォルトでリポジトリ内のworkspace内にそれぞれのユーザーのフォルダを作成し、mnt_workspaceという名前でそれぞれの環境でマウントしている(はず)
 
