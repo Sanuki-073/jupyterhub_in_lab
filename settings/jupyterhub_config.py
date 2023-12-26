@@ -113,7 +113,7 @@ class FindMyContainerNameHandler(BaseHandler):
 
 
 
-JUPYTER_HUB_CONTAINER_NAME="css_jupyterhub"
+JUPYTER_HUB_CONTAINER_NAME="jupyterhub"
 def get_jupyterhub_ip(container_name):
     client = docker.from_env()
     container = client.containers.get(container_name)
@@ -173,7 +173,7 @@ def form_func(self,spawner):
         "jupyter/base-notebook-gpu:latest",
         "jupyter/base-notebook:latest",
     ]
-    
+    spawner.allowed_images=allowed_images
     image_options = "".join([f'<option value="{img}">{img}</option>' for img in allowed_images])
 
     memory_options = "".join([f'<option value="{2**i}">{2**i}GB</option>' for i in range(8) if 150-Recent_used_memory-2**i>=0 ])
@@ -313,6 +313,7 @@ c.MyDockerSpawner.start_timeout =120
 # jupyterのhubへのルート
 c.JupyterHub.hub_ip = get_jupyterhub_ip(JUPYTER_HUB_CONTAINER_NAME)
 c.JupyterHub.hub_port = 8080 #好きなポート
+
 
 # JupyterhubにアクセスするためのIP
 #c.JupyterHub.ip=get_jupyterhub_ip(JUPYTER_HUB_CONTAINER_NAME)
