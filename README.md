@@ -19,6 +19,13 @@ Authはjupyterhub-firstuseauthenticatorを採用しており、ユーザー作�
 
 起動するイメージの変更やGPUを使うかなど設定をできるようにしている。
 <img width="799" alt="image" src="https://github.com/Sanuki-073/jupyterhub_in_lab/assets/43844864/6af76d1c-a05d-40fb-a510-973e76d39638">
+なおJupyterhubで起動できるイメージを事前にインストールしておく必要があり、
+https://hub.docker.com/r/jupyter/base-notebook/tags
+などで見つけられる。
+
+GPU対応のコンテナの作り方はWebにあるのでその通りに作ればいける。
+
+
 
 また、起動後のHub Control Pannelでコンテナのコミットなどをできるようにしている。
 <img width="591" alt="image" src="https://github.com/Sanuki-073/jupyterhub_in_lab/assets/43844864/0c7b47ea-45c2-49df-a6e6-1b0411bb9f9c">
